@@ -1,6 +1,6 @@
 {
   "name": "writeuint64le",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "convert a number to a 64 bit stream",
   "main": "writeUInt64LE.js",
   "scripts": {

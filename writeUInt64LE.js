@@ -14,10 +14,9 @@ function writeUInt64LE(buf, int64, offset) {
   const low = (int64 % MAX_UINT32) - big;
 
   if (!offset) {
-    const b = new Buffer(8);
-    b.writeUInt32LE(low, 0);
-    b.writeUInt32LE(big, 4);
-    return Buffer.concat([buf, b]);
+    buf.writeUInt32LE(low, 0);
+    buf.writeUInt32LE(big, 4);
+    return buf;
   } else {
     buf.writeUInt32LE(low, offset);
     buf.writeUInt32LE(big, offset + 4);
